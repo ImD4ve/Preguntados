@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Preguntados</string>
+    <!-- Textos de UI -->
+    <string name="lives_text">Vidas: %d</string>
+    <string name="correct_answer">¡Correcto!</string>
+    <string name="incorrect_answer">Incorrecto</string>
+
+    <!-- Diálogo Game Over -->
+    <string name="game_over_title_win">¡Ganaste!</string>
+    <string name="game_over_title_lose">Perdiste</string>
+    <string name="game_over_message_win">¡Completaste todas las preguntas!</string>
+    <string name="game_over_message_lose">Se acabaron tus vidas</string>
+    <string name="restart_button">Volver a jugar</string>
+    <string name="exit_button">Salir</string>
+
+    <!-- Categorías (opcional) -->
+    <string-array name="categories">
+        <item>Ciencia</item>
+        <item>Química</item>
+        <item>Arte</item>
+        <item>Historia</item>
+    </string-array>
 </resources>

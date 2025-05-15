@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var livesText: TextView
     private lateinit var spinButton: Button
 
-    private val categories = listOf("Ciencia", "Química", "Arte", "Historia")
+    private val categories = resources.getStringArray(R.array.categories).toList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupObservers() {
         viewModel.lives.observe(this) { lives ->
-            livesText.text = "Vidas: $lives"
+            livesText.text = getString(R.string.lives_text, lives)
             if (lives <= 0) showGameOver(false)
         }
 
@@ -114,19 +114,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkAnswer(selectedIndex: Int) {
         if (viewModel.checkAnswer(selectedIndex)) {
-            Toast.makeText(this, "¡Correcto!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.correct_answer, Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.incorrect_answer, Toast.LENGTH_SHORT).show()
         }
         questionPanel.visibility = View.GONE
     }
 
     private fun showGameOver(isWin: Boolean) {
         AlertDialog.Builder(this)
-            .setTitle(if (isWin) "¡Ganaste!" else "Perdiste")
-            .setMessage(if (isWin) "¡Completaste todas las preguntas!" else "Se acabaron tus vidas")
-            .setPositiveButton("Volver a jugar") { _, _ -> viewModel.resetGame() }
-            .setNegativeButton("Salir") { _, _ -> finish() }
+            .setTitle(if (isWin) getString(R.string.game_over_title_win) else getString(R.string.game_over_title_lose))
+            .setMessage(if (isWin) getString(R.string.game_over_message_win) else getString(R.string.game_over_message_lose))
+            .setPositiveButton(R.string.restart_button) { _, _ -> viewModel.resetGame() }
+            .setNegativeButton(R.string.exit_button) { _, _ -> finish() }
             .setCancelable(false)
             .show()
     }
