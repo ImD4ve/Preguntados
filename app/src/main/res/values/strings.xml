@@ -12,12 +12,5 @@
     <string name="game_over_message_lose">Se acabaron tus vidas</string>
     <string name="restart_button">Volver a jugar</string>
     <string name="exit_button">Salir</string>
-
-    <!-- Categorías (opcional) -->
-    <string-array name="categories">
-        <item>Ciencia</item>
-        <item>Química</item>
-        <item>Arte</item>
-        <item>Historia</item>
-    </string-array>
+    
 </resources>
