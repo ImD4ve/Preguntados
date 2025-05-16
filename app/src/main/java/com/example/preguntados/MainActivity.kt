@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import kotlin.math.floor
 import kotlin.random.Random
 
+
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: PreguntaViewModel
     private lateinit var wheelView: WheelView
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var livesText: TextView
     private lateinit var spinButton: Button
 
-    private val categories = resources.getStringArray(R.array.categories).toList()
+    private val categories = listOf("Ciencia", "Química", "Arte", "Historia")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
