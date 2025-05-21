@@ -12,5 +12,5 @@
     <string name="game_over_message_lose">Se acabaron tus vidas</string>
     <string name="restart_button">Volver a jugar</string>
     <string name="exit_button">Salir</string>
-    
+
 </resources>
