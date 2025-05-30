@@ -61,7 +61,6 @@ dependencies {
     implementation (libs.androidx.appcompat)
     implementation (libs.material)
     implementation (libs.androidx.constraintlayout)
-
     // Para usar viewBinding (opcional pero recomendado)
     implementation (libs.androidx.activity.ktx)
 

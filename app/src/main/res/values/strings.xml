@@ -4,6 +4,8 @@
     <string name="lives_text">Vidas: %d</string>
     <string name="correct_answer">¡Correcto!</string>
     <string name="incorrect_answer">Incorrecto</string>
+    <string name="girar_ruleta">Girar Ruleta</string>
+
 
     <!-- Diálogo Game Over -->
     <string name="game_over_title_win">¡Ganaste!</string>
